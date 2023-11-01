@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1 id="title">Document</title>
+        <link rel="stylesheet" href="survey.css">
 </head>
 <body>
     <p id="description">This is a survey form</p>
@@ -27,8 +28,15 @@
         </fieldset>
         <fieldset>
             <label for="Male" ><input id="Male" type="radio" name="Gender" value="Male"/>Male</label>
-            <label for="Female" ><input id="Female"type="radio" name="Gender" value="Male"/>Female</label>
-            <label for="Male" ><input id="Male" type="radio" name="Gender" value="Male"/>Male</label>
+            <label for="Female" ><input id="Female"type="radio" name="Gender" value="Female"/>Female</label>
+            <label for="textarea">Any Suggestions<textarea id="textarea"></textarea></label>
+        </fieldset>
+        <fieldset>
+            <label for="Terms" ><input id="Terms" type="checkbox" name="terms-and-conditions" value="Terms"/>Terms and Conditions</label>
+            <label for="Policy" ><input id="Policy" type="checkbox" name="privacy-policy" value="Terms"/>Privacy Policy</label>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Submit" id="submit" />
         </fieldset>
     </form>
 </body>
