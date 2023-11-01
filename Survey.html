@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1 id="title">Document</title>
+    <title>Survey Form</title>
         <link rel="stylesheet" href="survey.css">
 </head>
 <body>
-    <p id="description">This is a survey form</p>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill this survey form</p>
     <form id="survey-form">
         <fieldset>
             <label id="name-label">Full Name<input id="name" type="text" placeholder="Enter your name" required/></label>
@@ -27,16 +28,18 @@
             </label>
         </fieldset>
         <fieldset>
-            <label for="Male" ><input id="Male" type="radio" name="Gender" value="Male"/>Male</label>
-            <label for="Female" ><input id="Female"type="radio" name="Gender" value="Female"/>Female</label>
-            <label for="textarea">Any Suggestions<textarea id="textarea"></textarea></label>
+            <label>Gender
+            <label for="Male" ><input id="Male" type="radio" name="Gender" value="Male" class="inline"/>Male</label>
+            <label for="Female" ><input id="Female"type="radio" name="Gender" value="Female" class="inline"/>Female</label>
+            </label>
+        </fieldset>
+        <fieldset
+            <label for="text">Any Suggestions<textarea id="text" placeholder="Suggestions are accepted"></textarea></label>
+            <label for="Terms" ><input id="Terms" type="checkbox" name="terms-and-conditions" value="Terms" class="inline"/>Terms and Conditions</label>
+            <label for="Policy" ><input id="Policy" type="checkbox" name="privacy-policy" value="Terms" class="inline"/>Privacy Policy</label>
         </fieldset>
         <fieldset>
-            <label for="Terms" ><input id="Terms" type="checkbox" name="terms-and-conditions" value="Terms"/>Terms and Conditions</label>
-            <label for="Policy" ><input id="Policy" type="checkbox" name="privacy-policy" value="Terms"/>Privacy Policy</label>
-        </fieldset>
-        <fieldset>
-            <input type="submit" value="Submit" id="submit" />
+            <input type="submit" value="Submit" id="submit" class="submit"/>
         </fieldset>
     </form>
 </body>
