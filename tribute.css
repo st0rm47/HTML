@@ -52,10 +52,11 @@ section{
     font:20px ,sans-serif;
 }
 ul{
-    text-align:left;
+    text-align:justify;
     max-width: 550px;
     margin:0 auto 50px auto;
     line-height: 1.5;
+    ;
 }
 li{
     margin:16px 0;
