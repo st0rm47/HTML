@@ -55,3 +55,14 @@ body{
         display:flex;
         align-items: center;
 }
+.media{
+    display:flex;
+    align-items:center;
+}
+.media .link{
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    margin:5px;
+    border-radius: 50%;
+}
