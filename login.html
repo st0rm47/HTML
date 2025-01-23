@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('background-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <input type="text" id="username" name="username" placeholder="Username">
+        <div id="usernameError" class="error"></div>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <div id="passwordError" class="error"></div>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var usernameError = document.getElementById('usernameError');
+        var passwordError = document.getElementById('passwordError');
+        var isValid = true;
+
+        // Reset previous error messages
+        usernameError.innerHTML = '';
+        passwordError.innerHTML = '';
+
+        // Validate username
+        if (username.trim() === '') {
+            usernameError.innerHTML = 'Username is required';
+            isValid = false;
+        }
+
+        // Validate password
+        if (password.trim() === '') {
+            passwordError.innerHTML = 'Password is required';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>
+
+</body>
+</html>
